@@ -12,7 +12,12 @@ import type { InvestmentInput } from './investment-input.model';
 })
 export class AppComponent {
   onCalculateInvestmentResults(data: InvestmentInput) {
-    const { initialInvestment, annualInvestment, expectedReturn, duration } = data;
+    const {
+      initialInvestment,
+      annualInvestment,
+      expectedReturn,
+      duration
+    } = data;
     const annualData = [];
     let investmentValue = initialInvestment;
 
@@ -32,6 +37,6 @@ export class AppComponent {
       });
     }
 
-    return annualData;
+    console.log(annualData);
   }
 }

@@ -11,7 +11,7 @@ import type { InvestmentInput } from '../investment-input.model';
   styleUrl: './user-input.component.css'
 })
 export class UserInputComponent {
-  @Output() calculate = new EventEmitter<InvestmentInput>
+  @Output() calculate = new EventEmitter<InvestmentInput>();
 
   enteredInitialInvestment = '0';
   enteredAnnualInvestment = '0';
@@ -24,6 +24,6 @@ export class UserInputComponent {
       duration: +this.enteredDuration,
       expectedReturn: +this.enteredExpectedReturn,
       annualInvestment: +this.enteredAnnualInvestment
-    })
+    });
   }
 }
